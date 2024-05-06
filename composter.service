@@ -1,0 +1,15 @@
+[Unit]
+Description=composter python script
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+ExecStart=/home/pi/CompostPi/composter.sh
+WorkingDirectory=/home/pi/CompostPi/
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
