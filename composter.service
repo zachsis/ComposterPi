@@ -5,8 +5,8 @@ After=network.target
 [Service]
 Type=simple
 User=pi
-ExecStart=/home/pi/CompostPi/composter.sh
-WorkingDirectory=/home/pi/CompostPi/
+ExecStart=/home/pi/ComposterPi/composter.sh
+WorkingDirectory=/home/pi/ComposterPi/
 Restart=always
 RestartSec=10
 
