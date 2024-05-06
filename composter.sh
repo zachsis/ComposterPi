@@ -1,4 +1,4 @@
 #!/bin/bash
 
-source /home/zhatsis/composter/venv/bin/activate
-python /home/zhatsis/composter/composter.py
+source /home/pi/ComposterPi/venv/bin/activate
+python /home/pi/ComposterPi/composter.py
