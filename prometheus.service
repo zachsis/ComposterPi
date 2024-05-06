@@ -9,7 +9,7 @@ Restart=on-failure
 
 #Change this line if Prometheus is somewhere different
 ExecStart=/usr/local/bin/prometheus/prometheus \
-  --config.file=/usr/local/bin/prometheus.yml \
+  --config.file=/usr/local/bin/prometheus/prometheus.yml \
   --storage.tsdb.path=/usr/local/bin/prometheus/data
 
 [Install]
