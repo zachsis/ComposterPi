@@ -8,14 +8,14 @@ wget https://dl.grafana.com/oss/release/grafana-10.4.2.linux-armv7.tar.gz
 
 echo '[+] Uncompressing'
 tar -xzvf grafana-10.4.2.linux-armv7.tar.gz 
-mv grafana-v10.4.2/ /usr/local/bin/grafana
+sudo mv grafana-v10.4.2/ /usr/local/bin/grafana
 
 echo '[+] Downloading Prometheus Binaries'
 wget https://github.com/prometheus/prometheus/releases/download/v2.52.0-rc.0/prometheus-2.52.0-rc.0.linux-armv7.tar.gz
 
 echo '[+] Uncompressing'
 tar -xzvf prometheus-2.52.0-rc.0.linux-armv7.tar.gz
-mv prometheus-2.52.0-rc.0.linux-armv7 /usr/local/bin/prometheus
+sudo mv prometheus-2.52.0-rc.0.linux-armv7 /usr/local/bin/prometheus
 
 echo '[+] Copying prometheus configs'
 cp -pv prometheus.yml /usr/local/bin/prometheus/prometheus.yml
