@@ -11,7 +11,8 @@ with open('config.yaml', 'r') as file:
     config = yaml.safe_load(file)
 
 temperature_offset = config['composterpy']['temperature-offset']
-digital_io = getattr(board, config['composterpy']['digital-io'])
+#digital_io = getattr(board, config['composterpy']['digital-io'])
+digital_io = board.D5
 prometheus_interval = config['composterpy']['prometheus-interval']
 
 # Initialize sensor
@@ -25,12 +26,13 @@ def celsius_to_fahrenheit(celsius):
 
 def get_temp():
     readings = []
-    for _ in range(100):
+    for _ in range(10):
         readings.append(sensor.temperature)
-        time.sleep(0.1)  # short delay between readings
+        time.sleep(0.3)  # short delay between readings
+    #print(readings)
     average_temp = sum(readings) / len(readings)
     calibrated_temp = average_temp + temperature_offset
-    return celsius_to_fahrenheit(calibrated_temp)
+    return round(celsius_to_fahrenheit(calibrated_temp), 1)
 
 if __name__ == '__main__':
     # Start up the server to expose the metrics.
