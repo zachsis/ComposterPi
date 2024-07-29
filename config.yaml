@@ -1,0 +1,7 @@
+---
+composterpy:
+  temperature-offset: 0.0
+  digital-io: D5
+  prometheus-interval: 5
+
+
